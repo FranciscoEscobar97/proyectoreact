@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
-function ItemCount(){
+import { Button, Segment } from 'semantic-ui-react';
+
+
+
+
+function ItemCount({onAdd}){
     let stock = 15;
     const[counter,setCounter]=useState(0);
     const sumar=()=>{ 
@@ -10,15 +15,34 @@ function ItemCount(){
         }
     };
     const restar=()=>{
-        setCounter(counter-1)
+        if(counter>0){
+            setCounter(counter-1)
+        }else{
+            console.log('No hay mas producto disponible')
+        }
+       
     }
     return(
         <div>
-            <button onClick={sumar}>+</button>
-            <span>{counter}</span>
-            <button onClick={restar}>-</button>
+            
+            <Segment inverted>
+                <Button inverted color='orange' onClick={sumar} >
+                    +
+                </Button>
+                <span>{counter}</span>
+                <Button inverted color='yellow' onClick={restar}>
+                   -
+                </Button> 
+                <Button inverted color='black' onClick={()=>onAdd(counter)}>
+                  Agregar al carrito
+                </Button>
+                
+            </Segment>
+            
         </div>
     )
+      
+    
 
 }
 export default ItemCount;
