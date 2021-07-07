@@ -1,0 +1,16 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    color: white;
+    background-size:cover;
+    
+    background-image: url(../fondo.png);
+}
+.Header h1{
+    font-size: 6rem;
+    font-weight: bold;
+
+}

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Button, Segment } from 'semantic-ui-react';
-
+import './ItemCount.css'
 
 
 
@@ -23,21 +23,21 @@ function ItemCount({onAdd}){
        
     }
     return(
-        <div>
+        <div className="ItemCount">
             
             <Segment inverted>
                 <Button inverted color='orange' onClick={sumar} >
                     +
                 </Button>
-                <span>{counter}</span>
+                <span className="numberCount">{counter}</span>
                 <Button inverted color='yellow' onClick={restar}>
                    -
                 </Button> 
                 <Button inverted color='black' onClick={()=>onAdd(counter)}>
                   Agregar al carrito
                 </Button>
-                
             </Segment>
+            
             
         </div>
     )

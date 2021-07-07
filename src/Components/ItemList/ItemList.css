@@ -1,0 +1,8 @@
+.CardUser {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: end;
+    justify-content: space-around;
+    column-gap: 60px;
+}
