@@ -14,25 +14,37 @@ import Licores from './Views/Licores/Licores';
 import Green from './Views/Green/Green';
 import Navigation from './Components/Navigation/Navigation';
 import ItemDetalle from './Views/ItemDetalle/ItemDetalle';
-
+import Estilo from './Views/Estilo/Estilo';
+import Accesorios from './Views/Accesorios/Accesorios';
+import Footer from './Components/Footer/Footer';
 function App() {
   
   return (
     <Router>
       <div className="App">
-        <Header/>
-        <NavBar/>
         <Navigation/>
+        <Header/>
+        {/* <NavBar/> */}
+        <br/>
+        <br/>
         <Switch>
           <Route path='/' exact component={Home}/>
           <Route path='/licores' component={Licores}/>
+          <Route path='/accesorios' component={Accesorios}/>
+          <Route path='/prendas' component={Estilo}/>
           <Route path='/green' component={Green}/>
           <Route path='/detail/:id' component={ItemDetalle}/>
         </Switch>
         {/* <ItemListContainer greeting='Bienvenidos - por Francisco Escobar'/>
          */}
+         <br/>
+         <br/>
+         <br/>
+        <Footer/>
       </div>
+      
      </Router>
+     
   );
 }
 

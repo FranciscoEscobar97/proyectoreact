@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Home(){
+function Estilo(){
     return(
         <div>
-            <h1>HOME</h1>
+            <h1>Prendas - Tennis</h1>
         </div>
     )
 
 
 }
 
-export default Home;
+export default Estilo;

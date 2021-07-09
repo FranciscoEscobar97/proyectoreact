@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+.footer{
+    /* background: black; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.footerredes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+.textofooter{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^17.0.2",
@@ -41,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@iconify-icons/bi": "^1.1.5",
+    "@iconify-icons/brandico": "^1.1.0",
+    "@iconify/react": "^1.1.4"
   }
 }

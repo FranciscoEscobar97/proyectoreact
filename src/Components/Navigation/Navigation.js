@@ -1,41 +1,81 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react'
+import { Menu, Dropdown } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
-function Navigation(){
-    return(
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">Menu</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <Link to='/' className="nav-item">
-                Inicio
-              </Link>
-              <Link to='/green' className="nav-item">
-                Green 
-              </Link>
-              <Link to='/licores' className="nav-item">
-                Licores
-              </Link>             
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Productos
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a className="dropdown-item" href="#">Licor</a></li>
-                  <li><a className="dropdown-item" href="#">Exportacion</a></li>
-                  <li><a className="dropdown-item" href="#">Playeras</a></li>
-                  <li><a className="dropdown-item" href="#">Green shop</a></li>
-                </ul>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav> 
+import CartWidget from '../CartWidget/CartWidget';
+export default class MenuExampleInvertedSegment extends Component {
+  state = { activeItem: 'inicio' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      
+        <Menu pointing secondary>
+          <Link to='/'>
+            <Menu.Item
+              name='Inicio'
+              active={activeItem === 'inicio'}
+              onClick={this.handleItemClick}
+            />
+         </Link> 
+         <Link to='/licores'>
+            <Menu.Item
+              name='Licores'
+              active={activeItem === 'licores'}
+              onClick={this.handleItemClick}
+            />
+          </Link>
+         <Link to='/prendas'>
+            <Menu.Item
+              name='Buzos'
+              active={activeItem === 'prendas'}
+              onClick={this.handleItemClick}
+            />
+          </Link>
+         {/* <Link to='/accesorios'>
+            <Menu.Item
+              name='Accesorios'
+              active={activeItem === 'accesorios'}
+              onClick={this.handleItemClick}
+            />
+          </Link> */}
+          {/* <Link to='/green'>
+          <Menu.Item
+            name='Tienda verde'
+            active={activeItem === 'green'}
+            onClick={this.handleItemClick}
+          />
+          </Link> */}
+          <Dropdown item text='Accesorios'>
+          <Dropdown.Menu>
+            <Dropdown.Header>Elige</Dropdown.Header>
+            <Dropdown.Item>Tennis</Dropdown.Item>
+            <Dropdown.Item>Gorras</Dropdown.Item>
+          </Dropdown.Menu>
+          </Dropdown>
+          <Dropdown item text='Tienda verde'>
+          <Dropdown.Menu>
+
+            <Dropdown.Header>Elige</Dropdown.Header>
+            <Dropdown.Item><Link to='/green'>Papeles</Link></Dropdown.Item>
+            <Dropdown.Item>Pipas-bongs</Dropdown.Item>
+            <Dropdown.Item>Mecheros</Dropdown.Item>
+          </Dropdown.Menu>
+          </Dropdown>
+          <Menu.Menu position='right'>
+          <CartWidget/>
+          </Menu.Menu>
+          
+        
+          
+        </Menu>
+      
     )
+  }
 }
-export default Navigation;
+
+
+
