@@ -1,10 +1,10 @@
 import React from 'react';
-import Item from '../Item/Item';
-import './ItemList.css';
+import ItemBu from '../ItemBu/ItemBu';
+import './ItemListBu.css';
 
 import {Link} from 'react-router-dom';
 
-function ItemList({productos}){
+function ItemListBu({productos}){
 
     
     return(
@@ -17,8 +17,8 @@ function ItemList({productos}){
                         
                         
                         <div key={prod.id}>
-                            <Link to={`/detail/${prod.id}`}>
-                                <Item prod={prod}/>
+                            <Link to={`/detailbuzos/${prod.id}`}>
+                                <ItemBu prod={prod}/>
                             </Link>
                         </div>
                            
@@ -29,14 +29,11 @@ function ItemList({productos}){
                  
             </div>    
             
-        {/* <div className="CardUser">
-            {productos.map(prod=>
-                <Item prod={prod}/>)}
-        </div> */}
+       
          
         </>
 
     );
 }
 
-export default ItemList;
+export default ItemListBu;

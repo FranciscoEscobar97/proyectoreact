@@ -1,0 +1,37 @@
+.imagen{
+    padding-left: 20px;
+    padding-top: 80px;
+}
+.precioParaffo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: crimson;
+}
+.parra{
+    font-size: 1.5rem;
+    
+    color: rgb(0, 0, 0);
+}
+.refParaffo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(5, 179, 28);}
+.nombreParrafo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(2, 2, 2);
+}
+.valorParrafo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.detalleGeneral{
+    padding-left: 20px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: flex-start;
+    align-items: center;
+
+}

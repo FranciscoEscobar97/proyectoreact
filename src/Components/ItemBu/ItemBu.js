@@ -3,10 +3,10 @@ import React from 'react';
 import { Card, Image } from 'semantic-ui-react'
 import ItemCount from '../ItemCount/ItemCount';
 
-import './Item.css'
+import './ItemBu.css'
 
 
-function Item({prod}){
+function ItemBu({prod}){
   const onAdd =(counter)=>{
     console.log("agregar al carrito", counter)
   }
@@ -31,4 +31,4 @@ function Item({prod}){
 }
 
 
- export default Item;
+ export default ItemBu;

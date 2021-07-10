@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
-import {Container} from 'semantic-ui-react';
+
 import axios from 'axios';
 
 
@@ -16,11 +16,11 @@ function ItemListContainer({greeting}){
     return(
         <>
          <h1>{greeting}</h1>
-         <Container>
+         
              
          <ItemList productos={productos}/>
          
-         </Container>
+         
         </>
     )
 

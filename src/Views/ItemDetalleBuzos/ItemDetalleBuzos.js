@@ -1,11 +1,13 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
-//import {Card,Image} from 'semantic-ui-react'
-//import './ItemDetalle.css'
+
 import { Grid, Image } from 'semantic-ui-react'
 import ItemCount from '../../Components/ItemCount/ItemCount'
+import InputSelect from '../../Components/InputSelect/InputSelect'
+
+
 //import {Card, Image} from 'semantic-ui-react'
-function ItemDetalle({match}){
+function ItemDetalleBuzos({match}){
     const onAdd =(counter)=>{
         console.log("agregar al carrito", counter)
       }
@@ -14,7 +16,7 @@ function ItemDetalle({match}){
     const [detalle,setDetalle]=useState([]);
     //console.log(typeof detalle);
     useEffect(()=>{
-        axios(`https://my-json-server.typicode.com/FranciscoEscobar97/api/lista/${detalleID}`).then((res)=>setDetalle(res.data));
+        axios(`https://my-json-server.typicode.com/FranciscoEscobar97/api/buzos/${detalleID}`).then((res)=>setDetalle(res.data));
     },[detalleID]);
     //console.log(typeof detalle);
     return(
@@ -30,26 +32,11 @@ function ItemDetalle({match}){
                         <p className="parra">Referencia: <span className="refParaffo"> {detalle.referencia}</span></p>
                         <p className="parra">Precio: <span className="precioParaffo">{detalle.precio}</span></p>
                         <ItemCount onAdd={onAdd}/>
+                        <InputSelect/>
                     </Grid.Column>
                     </Grid>
-                    {/*  <Image src={detalle.imageUrl} wrapped ui={false}/>
-                </div>
-                <div key={detalle.id} className="detalleGeneral">
-                    <h2 className="nombreParrafo">{detalle.nombre}</h2>
-                    <p className="parra">Referencia: <span className="refParaffo"> {detalle.referencia}</span></p>
-                    <p className="parra">Precio: <span className="precioParaffo">{detalle.precio}</span></p>
-                    <ItemCount/> */}
-                
-
-                
-               {/*  <Card >
-                    
-                    <Card.Content>
-                        <Card.Header></Card.Header>
-                    </Card.Content>
-                </Card> */}
                 </div>
         
     );
 }
-export default ItemDetalle;
+export default ItemDetalleBuzos;

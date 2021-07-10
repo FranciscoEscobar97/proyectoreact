@@ -28,12 +28,12 @@ function ItemCount({onAdd}){
             
                 <Button inverted color='orange' onClick={sumar} >
                     +
-                </Button>
-                <span className="numberCount">{counter}</span>
+                </Button>&nbsp; &nbsp;
+                <span className="numberCount">{counter}</span>&nbsp; &nbsp;
                 <Button inverted color='yellow' onClick={restar}>
                    -
-                </Button> 
-                <Button inverted color='black' onClick={()=>onAdd(counter)}>
+                </Button> <br/><br/>
+                <Button secondary onClick={()=>onAdd(counter)}>
                   Agregar al carrito
                 </Button>
             

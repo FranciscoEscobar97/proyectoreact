@@ -17,6 +17,7 @@ import ItemDetalle from './Views/ItemDetalle/ItemDetalle';
 import Estilo from './Views/Estilo/Estilo';
 import Accesorios from './Views/Accesorios/Accesorios';
 import Footer from './Components/Footer/Footer';
+import ItemDetalleBuzos from './Views/ItemDetalleBuzos/ItemDetalleBuzos';
 function App() {
   
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path='/prendas' component={Estilo}/>
           <Route path='/green' component={Green}/>
           <Route path='/detail/:id' component={ItemDetalle}/>
+          <Route path='/detailbuzos/:id' component={ItemDetalleBuzos}/>
         </Switch>
         {/* <ItemListContainer greeting='Bienvenidos - por Francisco Escobar'/>
          */}
