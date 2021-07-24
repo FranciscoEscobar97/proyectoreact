@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { Menu, Dropdown } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
-
-import CartWidget from '../CartWidget/CartWidget';
+import React, { Component } from 'react';
+import { Menu, Dropdown } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import Icon from '../Icon/Icon';
 export default class MenuExampleInvertedSegment extends Component {
   state = { activeItem: 'inicio' }
 
@@ -35,20 +34,7 @@ export default class MenuExampleInvertedSegment extends Component {
               onClick={this.handleItemClick}
             />
           </Link>
-         {/* <Link to='/accesorios'>
-            <Menu.Item
-              name='Accesorios'
-              active={activeItem === 'accesorios'}
-              onClick={this.handleItemClick}
-            />
-          </Link> */}
-          {/* <Link to='/green'>
-          <Menu.Item
-            name='Tienda verde'
-            active={activeItem === 'green'}
-            onClick={this.handleItemClick}
-          />
-          </Link> */}
+         
           <Dropdown item text='Accesorios'>
           <Dropdown.Menu>
             <Dropdown.Header>Elige</Dropdown.Header>
@@ -60,13 +46,14 @@ export default class MenuExampleInvertedSegment extends Component {
           <Dropdown.Menu>
 
             <Dropdown.Header>Elige</Dropdown.Header>
-            <Dropdown.Item><Link to='/green'>Papeles</Link></Dropdown.Item>
-            <Dropdown.Item>Pipas-bongs</Dropdown.Item>
-            <Dropdown.Item>Mecheros</Dropdown.Item>
+            
+            <Dropdown.Item><Link to='/green'>Pipas-bongs</Link></Dropdown.Item>
+            
           </Dropdown.Menu>
           </Dropdown>
-          <Menu.Menu position='right'>
-          <CartWidget/>
+          
+          <Menu.Menu>
+          <Icon/>
           </Menu.Menu>
           
         

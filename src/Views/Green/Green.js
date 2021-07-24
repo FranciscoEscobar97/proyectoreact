@@ -1,11 +1,14 @@
 import React from 'react';
+import ItemListContainerGreen from '../../Components/ItemListContainerGreen/ItemListContainerGreen';
 
 function Green(){
-    return(
-        <div>
-            <h1>GREEN</h1>
-        </div>
-    )
+        return(
+            <div>
+                <h1>Bongs-Pipas</h1>
+                <ItemListContainerGreen/>
+            </div>
+        )
+    
 
 
 }

@@ -9,15 +9,16 @@ import './App.css';
 //import ItemCount from './Components/ItemCount/ItemCount';
 import Header from './Components/Header/Header';
 //VIEWS
+import Navigation from './Components/Navigation/Navigation';
 import Home from './Views/Home/Home';
 import Licores from './Views/Licores/Licores';
 import Green from './Views/Green/Green';
-import Navigation from './Components/Navigation/Navigation';
-import ItemDetalle from './Views/ItemDetalle/ItemDetalle';
 import Estilo from './Views/Estilo/Estilo';
 import Accesorios from './Views/Accesorios/Accesorios';
 import Footer from './Components/Footer/Footer';
+import ItemDetalle from './Views/ItemDetalle/ItemDetalle';
 import ItemDetalleBuzos from './Views/ItemDetalleBuzos/ItemDetalleBuzos';
+import ItemDetalleGreen from './Views/ItemDetalleGreen/ItemDetalleGreen';
 function App() {
   
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='/green' component={Green}/>
           <Route path='/detail/:id' component={ItemDetalle}/>
           <Route path='/detailbuzos/:id' component={ItemDetalleBuzos}/>
+          <Route path='/detailgreen/:id' component={ItemDetalleGreen}/>
         </Switch>
         {/* <ItemListContainer greeting='Bienvenidos - por Francisco Escobar'/>
          */}
